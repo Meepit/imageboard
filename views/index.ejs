@@ -6,6 +6,16 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <p>New Thread</p>
+    <form id="thread-form" action="/thread/new" method="POST">
+      <div>
+        <label for="title-field">Title<label>
+        <input type="text" id="title-field" name="title"></input>
+      </div>
+      <textarea rows="4" cols="50" name="description" form="thread-form"> Enter text here...</textarea>
+      <div>
+        <input type="Submit" value="Post">
+      </div>
+    </form>
   </body>
 </html>
